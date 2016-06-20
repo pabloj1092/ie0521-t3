@@ -8,9 +8,9 @@ Vagrant.configure("2") do |config|
 
   config.vm.hostname = "ie-0521"
   config.vm.provider "docker" do |d|
-    d.image = "jsdanielh/ie-0521:0.0.2"
+    d.image = "jsdanielh/ie-0521:0.0.3"
     d.has_ssh = true
-#    d.pull = true
+    d.pull = true
   end
   config.vm.network :forwarded_port, host: 9090, guest: 8080, auto_correct: true
   config.ssh.username = "ie0521"
